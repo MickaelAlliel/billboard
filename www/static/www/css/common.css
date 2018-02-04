@@ -1,0 +1,36 @@
+.head-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    color: black;
+}
+
+.no-messages-warning {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.btn {
+    color: white;
+    font-size: 16px;
+    border-style: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+    width: 100px;
+    height: 40px;
+}
+
+.btn:active {
+    box-shadow: 0px 0px 1px 1px black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+}

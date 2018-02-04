@@ -1,0 +1,16 @@
+{% extends 'www/base.html' %}
+{% block content %}
+
+{% if bills %}
+    {% for bill in bills %}
+        {% include 'www/bill.html' %}
+    {% endfor %}
+{% else %}
+    <div class="no-messages-warning">
+        No messages...
+        <br/>
+        Click the '+' button to add a new message
+    </div>
+{% endif %}
+
+{% endblock %}
