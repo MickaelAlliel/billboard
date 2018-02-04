@@ -14,7 +14,9 @@ To use this project, follow these steps:
 
 1. Clone this repository
 2. Install requirements found in the Pipfile
-3. `python manage.py runserver`
+3. Add DATABASE_URL env variable (`mysql://USER:PASS@HOST/DBNAME`)
+4. `python manage.py migrate`
+5. `python manage.py runserver`
 
 ## Deployment to Heroku
 
