@@ -1,0 +1,24 @@
+<div class="bill-add-border" id="billAddContainer">
+    <div class="bill-date">
+        {{ current_date }}
+    </div>
+    <form method="POST" action="/" id="billForm">{% csrf_token %}
+        <div class="input-field">
+            <input type="text" name="title" id="title">
+            <label for="title">Title</label>
+        </div>
+        <div class="input-field">
+            <textarea name="message" id="message" class="materialize-textarea"></textarea>
+            <label for="message">Message</label>
+        </div>
+        <div class="input-field" id="authorFieldContainer">
+            <input type="text" name="author" id="author">
+            <label for="author">Author</label>
+        </div>
+    </form>
+</div>
+<div class="bill-add-btn-border" id="billAddBtnContainer">
+    <button class="btn bill-add-btn" id="addBillBtn"><i class="fa fa-plus"></i></button>
+    <button class="btn bill-discard-btn red" id="discardBillBtn"><i class="fa fa-close"></i></button>
+    <button class="btn bill-add-btn" id="confirmBillBtn"><i class="fa fa-check"></i></button>
+</div>
