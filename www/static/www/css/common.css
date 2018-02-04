@@ -23,6 +23,23 @@
     height: 40px;
 }
 
+.btn-auth {
+    border: 1px dashed #00b7ef;
+    width: 100px;
+    padding: 5px 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+    background-color: white;
+}
+
+.btn-block {
+    width: 100%;
+}
+
 .page-container {
     display: flex;
     flex-direction: column;
@@ -30,4 +47,16 @@
 
     width: 100%;
     padding-bottom: 25px;
+}
+
+.spacer {
+    height: 40px;
+}
+
+.auth-container {
+    display: flex;
+}
+
+.register-notice {
+    color: red;
 }

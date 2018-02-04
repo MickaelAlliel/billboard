@@ -1,0 +1,37 @@
+{% extends 'www/base.html' %}
+{% block content %}
+
+<form method="POST" action="/register">{% csrf_token %}
+    <div class="container">
+        <div class="col s12">
+            <h1 class="head-title">REGISTER</h1>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div class="input-field">
+                    <input type="text" name="username" id="username" required maxlength='30'>
+                    <label for="username">Username</label>
+                </div>
+                <span class="register-notice">Required. 30 Characters or fewer. Letters, digits and @/./+/-/_ only.</span>
+            </div>
+            <div class="col s12">
+                <div class="input-field">
+                    <input type="password" name="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="col s12">
+                    <div class="input-field">
+                        <input type="password" name="repeatPassword" id="repeatPassword" required>
+                        <label for="repeatPassword">Repeat Password</label>
+                    </div>
+                    <span class="register-notice">Confirm your password for verification.</span>
+                </div>
+            <div class="col s12">
+                <button type="submit" class="btn-auth btn-block">Register</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

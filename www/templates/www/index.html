@@ -1,6 +1,25 @@
 {% extends 'www/base.html' %}
 {% block content %}
 
+{% if request.user.is_authenticated %}
+<h5>{{ request.user.username }}</h5>
+<a class="btn-auth" href="{% url 'logout' %}">Logout</a>
+{% else %}
+<h5>{{ request.user }}</h5>
+<div class="auth-container">
+    <div>
+        <a class="btn-auth" href="{% url 'login' %}">Login</a>
+    </div>
+    <div>
+        <a class="btn-auth" href="{% url 'register' %}">Register</a>
+    </div>
+</div>
+{% endif %}
+
+
+
+<div class="spacer"></div>
+
 {% if bills %}
     {% for bill in bills %}
         {% include 'www/bill.html' %}
@@ -12,5 +31,6 @@
         Click the '+' button to add a new message
     </div>
 {% endif %}
+{% include 'www/addbill.html' %}
 
 {% endblock %}

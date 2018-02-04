@@ -15,13 +15,17 @@
             <label for="message">Message</label>
         </div>
         <div class="input-field" id="authorFieldContainer">
-            <input type="text" name="author" id="author">
+            {% if request.user.is_authenticated %}
+            <input type="text" name="author" id="author" value="{{ request.user.username }}" disabled>
+            {% else %}
+            <input type="text" name="author" id="author" value="{{ request.user }}" disabled>
+            {% endif %}
             <label for="author">Author</label>
         </div>
     </form>
 </div>
 <div class="bill-add-btn-border" id="billAddBtnContainer">
-    <button class="btn bill-add-btn" id="addBillBtn"><i class="fa fa-plus"></i></button>
+    <button class="btn bill-add-btn" id="addBillBtn"><i class="fa fa-plus pulseAnimation"></i></button>
     <button class="btn bill-discard-btn red" id="discardBillBtn"><i class="fa fa-close"></i></button>
     <button class="btn bill-add-btn" id="confirmBillBtn"><i class="fa fa-check"></i></button>
 </div>
