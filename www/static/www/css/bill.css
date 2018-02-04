@@ -1,7 +1,7 @@
 .bill {
     border: 3px solid #00b7ef;
     width: 100%;
-    max-width: 756px;
+    max-width: 800px;
     min-height: 100px;
 
     margin-bottom: 40px;
@@ -33,6 +33,8 @@
     font-family: Arial, sans-serif;
     font-size: 16px;
     color: #c1bfc0;
+
+    overflow-wrap: break-word;
 }
 
 .bill-author {
@@ -94,4 +96,12 @@
 
 #authorFieldContainer > label {
     left: initial;
+}
+
+#flash-message {
+    color: red;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }

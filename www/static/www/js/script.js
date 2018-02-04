@@ -29,7 +29,16 @@ function addBillHandler() {
 }
 
 function confirmBillHandler() {
-    Billboard.billForm.submit();
+    title = $('#title');
+    message = $('#message');
+    author = $('#author');
+
+    if (!title.val() || !message.val() || !author.val()) {
+        Billboard.flashMessage.html('All fields are required. Please make sure something is not missing and try again.');
+        Billboard.flashMessage.addClass('animated shake');
+    } else {
+        Billboard.billForm.submit();
+    }
 }
 
 function discardBillHandler() {
@@ -38,6 +47,7 @@ function discardBillHandler() {
 
 $(document).ready(function() {
     Billboard.billForm = $('#billForm');
+    Billboard.flashMessage = $('#flash-message');
     Billboard.billAddContainer = $('#billAddContainer');
     Billboard.addBillBtn = $('#addBillBtn');
     Billboard.confirmBillBtn = $('#confirmBillBtn');

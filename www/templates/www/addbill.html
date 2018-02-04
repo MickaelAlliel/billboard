@@ -3,6 +3,9 @@
         {{ current_date }}
     </div>
     <form method="POST" action="/" id="billForm">{% csrf_token %}
+        <div>
+            <p id="flash-message"></p>
+        </div>
         <div class="input-field">
             <input type="text" name="title" id="title">
             <label for="title">Title</label>
