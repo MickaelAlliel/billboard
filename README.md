@@ -1,43 +1,27 @@
-# Heroku Django Starter Template
+# BILLBOARD
 
-An utterly fantastic project starter template for Django 2.0.
+An utterly fantastic billboard app to share messages publicly.
 
 ## Features
 
-- Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
-- Enhancements to Django's static file serving functionality via WhiteNoise.
-- Latest Python 3.6 runtime environment.
+- Add new messages
+- Remove own messages
+- Authentification
 
 ## How to Use
 
 To use this project, follow these steps:
 
-1. Create your working environment.
-2. Install Django (`$ pipenv install django`)
-3. Create a new project using this template
-
-## Creating Your Project
-
-Using this template to create a new Django app is easy::
-
-    $ django-admin.py startproject --template=https://github.com/heroku/heroku-django-template/archive/master.zip --name=Procfile helloworld
-
-(If this doesn't work on windows, replace `django-admin.py` with `django-admin`)
-
-You can replace ``helloworld`` with your desired project name.
+1. Clone this repository
+2. Install requirements found in the Pipfile
+3. `python manage.py runserver`
 
 ## Deployment to Heroku
-
-    $ git init
-    $ git add -A
-    $ git commit -m "Initial commit"
 
     $ heroku create
     $ git push heroku master
 
     $ heroku run python manage.py migrate
-
-See also, a [ready-made application](https://github.com/heroku/python-getting-started), ready to deploy.
 
 
 ## License: MIT
